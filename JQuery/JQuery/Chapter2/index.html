@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--CSS 群组选择器和后代选择器的区别在于是否中间是否有空格；
+        后台选择器和子选择器的去呗在于是否中间是>
+        对于JQuery的选择器可能同样适用，注意；-->
+    <!--CSS有行间样式表，内部样式表和外部样式表之分，越靠近元素的样式越Important；
+    提倡外部样式表可以让表现和内容分离；
+    而JQuery有相同样式，提倡外部引用，可以让行为和内容分离；-->
+    <title></title>
+    <script src="../Scripts/jquery-1.11.3.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var btn = document.getElementById("btn");
+            btn.onclick = function() {
+                var array = new Array();
+                var items = document.getElementsByName("check");
+                for (i = 0; i < items.length; i++) {
+                    if (items[i].checked) {
+                        array.push(items[i].value);
+                    }
+                }
+                alert("Count: " + array.length);
+            };
+        };
+    </script>
+</head>
+<body>
+    <input type="checkbox" value="1" name="check" checked="checked" />
+    <input type="checkbox" value="2" name="check"  />
+    <input type="checkbox" value="3" name="check"  />
+    <input type="checkbox" value="4" name="check" checked="checked" />
+
+    <input type="button" value="The selected count:" id="btn" />
+</body>
+</html>
