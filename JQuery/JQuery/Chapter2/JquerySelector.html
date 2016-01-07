@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
+    <title>JQuery选择器</title>
     <style>
         div,span,p{
             width:140px;
@@ -43,7 +43,23 @@
             //$(".one").next("div").css("background", "#bbffaa");
             //$("#two~div").css("background", "#bbffaa");//后面的所有同辈元素,同下：
             //$("#two").nextAll("div").css("background", "#bbffaa");
-            $("#two").siblings("div").css("background", "#bbffaa");
+            //$("#two").siblings("div").css("background", "#bbffaa");
+
+            //过滤选择器
+
+            //基本过滤器
+            //$("div:first").css("background", "#bbffaa");
+            //$("div:last").css("background", "#bbffaa");
+            //$("div:not(.one)").css("background", "#bbffaa");
+            //$("div:not(#notTest)").css("background", "#bbffaa");
+            //$("div:even").css("background", "#bbffaa");
+            //$("div:odd").css("background", "#bbffaa");
+            //$("div:eq(3)").css("background", "#bbffaa");
+            //$("div:gt(3)").css("background", "#bbffaa");
+            //$("div:lt(3)").css("background", "#bbffaa");
+            //$(":header").css("background", "#bbffaa");
+            //$(":animated").css("background", "#bbffaa");
+            //$(":focus").css("background", "#bbffaa");
         });
     </script>
 </head>
@@ -67,7 +83,7 @@
         <div class="mini">class is mini</div>
         <div class="mini">class is mini</div>
         <div class="mini">class is mini</div>
-        <div class="mini" title="test"> class is min and title is test</div>
+        <div class="mini" title="test" id="notTest"> class is min and title is test</div>
     </div>
     <div style="display:none;" class="one">
         display of style is none
@@ -78,5 +94,6 @@
         <input type="hidden" size="8" />
     </div>
     <span id="mover"> 动画 span element</span>
+    <h1>基本过滤选择器</h1>
 </body>
 </html>
