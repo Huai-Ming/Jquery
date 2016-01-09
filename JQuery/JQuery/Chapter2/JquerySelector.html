@@ -65,7 +65,27 @@
             //$("div:contains(di)").css("background", "#bbffaa");
             //$("div:empty").css("background", "#bbffaa");
             //$("div:has('.mini')").css("background", "#bbffaa");
-            $("div:parent").css("background", "#bbffaa");
+            //$("div:parent").css("background", "#bbffaa");
+
+            //可见性过滤选择器
+            //$("div:visible").css("background", "#bbffaa");
+            //$("div:hidden").show();
+
+            //属性过滤选择器
+            //$("div[title]").css("background", "#bbffaa");
+            //$("div[title=test]").css("background", "#bbffaa");
+            //$("div[title!=test]").css("background", "#bbffaa");
+            //$("div[title^=te]").css("background", "#bbffaa");
+            //$("div[title$=est]").css("background", "#bbffaa");
+            //$("div[title*=es]").css("background", "#bbffaa");
+            //$("div[id][title*=es]").css("background", "#bbffaa");
+            //$("div[title|='te']").css("background", "#bbffaa");
+
+            //子元素过滤选择器
+            //$("div.one :nth-child(2)").css("background", "#bbffaa");
+            //$("div.one :first-child").css("background", "#bbffaa");
+            //$("div.one :last-child").css("background", "#bbffaa");
+            $("div.one :only-child").css("background", "#bbffaa");
         });
     </script>
 </head>
@@ -74,7 +94,7 @@
         id is one, and class is one div
         <div class="mini"> class is mini</div>
     </div>
-    <div class="one" id="two" title="test">
+    <div class="one" id="two" title="te-st">
         id is two, class is one, title is test
         <div class="mini" title="other"> class is mini, title is other</div>
         <div class="mini" title="test"> class is mini title is test</div>
