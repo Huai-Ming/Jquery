@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        .high{
+            font-weight:bold;
+            color:red;
+        }
+
+        .another{
+            font-style: italic;
+            color:blue;
+        }
+    </style>
+    <script src="../Scripts/jquery-1.11.3.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            //*Retrieve node*//
+            //alert($("ul li:eq(1)").text());
+            //alert($("p").attr("title"));
+
+            //*Create node*//
+            //var $li_1 = $("<li></li>");
+            //var $li_2 = $("<li></li>");
+            //$("ul").append($li_1);
+            //$("ul").append($li_2);
+            //$li_1.appendTo("ul");
+            //$li_2.appendTo("ul");
+
+            //var $li_1 = $("<li>Banana</li>");
+            //var $li_2 = $("<li>Pear</li>");
+            //$("ul").append($li_1);
+            //$("ul").append($li_2);
+            //$li_1.appendTo("ul");
+            //$li_2.appendTo("ul");
+
+            //*Insert node*//
+
+            //Preappend 和append是对于待插入元素的子节点中的先后顺序来说的。
+            //$("p").append($("<b>Hello</b>"));
+            //$("<b>Hello</b>").appendTo("p");
+            //$("p").prepend($("<b>Hello</b>"));
+            //$("<b>Hello</b>").prependTo("p");
+
+            //after/before是对于匹配元素/插入元素的同级节点后/前来说的；
+            //$("p").after($("<b>Hello</b>"));
+            //$("<b>Hello</b>").insertAfter("p");
+            //$("p").before($("<b>Hello</b>"));
+            //$("<b>Hello</b>").insertBefore("p");
+
+            //*Delete node *//
+            //Remove 方法，讲级联删除所有后代节点
+            //var $li = $("ul li:eq(1)").remove();
+            //$li.appendTo("ul");
+
+            //此代码实现移动元素功能
+            //移动元素时，首先从文档上删除此元素，然后将改元素插入得到文档中的指定节点
+            //$("ul li:eq(1)").appendTo("ul");
+
+            //$("ul li").remove("li[title!=pineapple]");
+
+            //Detach方法，删除匹配的元素；但不会把匹配的元素从jquey对象中删除，删除的数据绑定的事件都会保存下来
+            //$("ul li").click(function () {
+            //    alert($(this).text());
+            //});
+
+            //$("ul li:eq(1)").appendTo("ul");
+            //var $li = $("ul li:eq(1)").remove();
+            //$li.appendTo("ul");
+            //var $li = $("ul li:eq(1)").detach();
+            //$li.appendTo("ul");
+
+            //Empty方法，清空元素中所有的后代元素
+            //$("ul li:eq(1)").empty();
+
+            //*Copy element*//
+            //$("ul li").click(function () {
+            //    //$(this).clone().appendTo("ul");
+            //    //添加true参数，元素的副本也具有和原本有相同的事件
+            //    $(this).clone(true).appendTo("ul");
+            //});
+
+            //*Replace the node*//
+            //ReplaceWith 被动，repalceAll主动，相同,都需要重新绑定事件
+            //$("p").replaceWith("<strong>your favourite fruit?</strong>");
+            //$("<strong>your favourite fruit?</strong>").replaceAll("p");
+
+            //*Wrap the node*//
+           
+            //$("p").replaceWith("<strong>your favourite fruit?</strong>");
+
+            //wrap 外部包裹,将所有的元素单独包裹
+            //$("strong").wrap("<b></b>");
+
+            //$("strong").after("<strong>your favourite fruit?</strong>");
+            ////$("strong").wrap("<b></b>");
+            ////wrapAll 在所有元素外包裹
+            ////$("strong").wrapAll("<b></b>");
+            ////wrapInner 元素内包裹
+            //$("strong").wrapInner("<b></b>");
+
+
+            //*属性操作*//
+            //alert($("p").attr("title"));
+            //$("p").attr("title", "test");
+            //alert($("p").attr("title"));
+            //$("p").attr({ "title": "test", "name": "test" });
+            //alert($("p").attr("title"));
+            //alert($("p").attr("name"));
+            //$("p").removeAttr("title");
+            //alert($("p").attr("title"));
+
+
+            //*样式操作*//
+            //attr(class）和addClass()一个设置属性值，一个添加样式；
+            //获取和设置样式
+            $("p").attr("class", "high");
+             $("p").addClass("another");
+
+            //移除样式
+            //$("p").removeClass("high");
+
+            //空格隔开以移除多个class
+            //$("p").removeClass("high another");
+
+            //切换样式
+            //$("p").toggleClass("another");
+             alert($("p").hasClass("another"));
+             alert($("p").is(".another"));
+        })
+    </script>
+</head>
+<body>
+    <p title="Select your favourite fruit">Your favourite fruite?</p>
+    <ul>
+        <li title="apple">Apple</li>
+        <li title="organge">Organge</li>
+        <li title="pineapple">Pineapple</li>
+    </ul>
+</body>
+</html>

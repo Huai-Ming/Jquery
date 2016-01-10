@@ -68,6 +68,7 @@
     <Content Include="Chapter1\index.html" />
     <Content Include="Chapter2\index.html" />
     <Content Include="Chapter2\JquerySelector.html" />
+    <Content Include="Chapter3\Dom.html" />
     <Content Include="Scripts\jquery-1.11.3.js" />
     <Content Include="Web.config" />
   </ItemGroup>
