@@ -126,8 +126,36 @@
 
             //切换样式
             //$("p").toggleClass("another");
-             alert($("p").hasClass("another"));
-             alert($("p").is(".another"));
+             //alert($("p").hasClass("another"));
+            //alert($("p").is(".another"));
+
+            //设置和获取html 文本
+             //$("p").html("<strong>You favourite fruit?</strong>");
+            //alert($("p").html());
+
+            //alert($("p").text());
+             //$("#address").focus(function () {
+             //    var txt = $(this).val();
+             //    //
+             //    if (txt == this.defaultValue) {
+             //        $(this).val("");
+             //    }
+             //});
+             //$("#address").blur(function () {
+             //    var txt = $(this).val();
+             //    if (txt == "") {
+             //        $(this).val("Input the email address");
+             //    }
+            //});
+
+            //遍历节点
+             //alert($("body").children().length);
+             //alert($("p").children().length);
+            //alert($("ul").children().length);
+
+            //alert($("p").next().children().length);
+            //alert($("ul").prev().html());
+             alert($("p").siblings().length);
         })
     </script>
 </head>
@@ -137,6 +165,9 @@
         <li title="apple">Apple</li>
         <li title="organge">Organge</li>
         <li title="pineapple">Pineapple</li>
-    </ul>
+    </ul><br />
+    <input type="text" id="address" value="Input the email address" />
+    <input type="text" id="password" value="Input the email password" />
+    <input type="button" value="Log in" />
 </body>
 </html>
