@@ -69,7 +69,24 @@
     <Content Include="Chapter2\index.html" />
     <Content Include="Chapter2\JquerySelector.html" />
     <Content Include="Chapter3\Dom.html" />
+    <Content Include="Content\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\images\ui-bg_highlight-soft_75_5f7a76_1x100.png" />
+    <Content Include="Content\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\ui.jqgrid-bootstrap.css" />
+    <Content Include="Content\ui.jqgrid.css" />
+    <Content Include="jqGrid\index.html" />
+    <Content Include="Scripts\grid.locale-en.js" />
     <Content Include="Scripts\jquery-1.11.3.js" />
+    <Content Include="Scripts\jquery.jqGrid.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
