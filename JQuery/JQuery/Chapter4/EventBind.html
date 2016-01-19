@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../Scripts/jquery-1.11.3.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            //$("#panel h5.head").bind("mouseover", function () {
+            //    var content = $(this).next();
+            //    if (content.is(":visible")) {
+            //        content.hide();
+            //    }
+            //    else {
+            //        content.show();
+            //    }
+            //});
+
+            //$("#panel h5.head").mouseover(function () {
+            //    var content = $(this).next();
+            //    if (content.is(":visible")) {
+            //        content.hide();
+            //    }
+            //    else {
+            //        content.show();
+            //    }
+            //});
+
+            //$("#panel h5.head").hover(function () {
+            //    var content = $(this).next();
+            //    content.show();
+            //}, function () {
+            //    var content = $(this).next();
+            //    content.hide();
+            //});
+
+            //$("#panel h5.head").toggle(function () {
+            //    var content = $(this).next();
+            //    content.show();
+            //}, function () {
+            //    var content = $(this).next();
+            //    content.hide();
+            //});
+
+            $("#panel h5.head").toggle(function () {
+                $(this).next().toggle();
+            }, function () {
+                $(this).next().toggle();
+            });
+            //    content.show();
+            //}, function () {
+            //    var content = $(this).next();
+            //    content.hide();
+            //});
+        });
+    </script>
+    <style>
+        .content{
+            visibility:visible;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="panel">
+        <h5 class="head">What's jquery</h5>
+        <div class="content">
+            Hhahahahhhahahah
+        </div>
+    </div>
+</body>
+</html>
