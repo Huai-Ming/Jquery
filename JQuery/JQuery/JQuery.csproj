@@ -57,6 +57,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="jqGrid\AdjacencySimpleTree.html" />
+    <Content Include="jqGrid\data.json" />
+    <Content Include="jqGrid\data1.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -85,6 +88,8 @@
     <Content Include="Content\ui.jqgrid-bootstrap.css" />
     <Content Include="Content\ui.jqgrid.css" />
     <Content Include="jqGrid\index.html" />
+    <Content Include="jqGrid\simpleTree.html" />
+    <Content Include="jqGrid\TreeMenu.html" />
     <Content Include="Scripts\grid.locale-en.js" />
     <Content Include="Scripts\jquery-1.11.3.js" />
     <Content Include="Scripts\jquery.jqGrid.js" />

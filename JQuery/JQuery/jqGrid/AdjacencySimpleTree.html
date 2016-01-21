@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../Scripts/jquery-1.11.3.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery.jqGrid.js" type="text/javascript"></script>
+    <script src="../Scripts/grid.locale-en.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../Content/ui.jqgrid.css" type="text/css" />
+    <link rel="stylesheet" href="../Content/jquery-ui.css" type="text/css" />
+</head>
+<body>
+
+    <table id="tree"></table>
+    <div id="pager"></div>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            jQuery('#tree').jqGrid({
+                "url": "data1.json",
+                "datatype": "json",
+                "colModel": [
+					{
+					    "name": "emp_id",
+					    "index": "emp_id",
+					    "sorttype": "int",
+					    "key": true,
+					    "hidden": true
+					}, {
+					    "name": "name",
+					    "index": "name",
+					    "sorttype": "string",
+					    "label": "Employee",
+					    "width": 170
+					},
+                    {
+                        "name": "salary",
+                        "index": "salary",
+                        "sorttype": "string",
+                        "label": "Salary",
+                        "hidden":true,
+                        "width": 170
+                    }, {
+					    "name": "boss_id",
+					    "hidden": true
+					}
+                ],
+                "width": "780",
+                "hoverrows": false,
+                "viewrecords": false,
+                "gridview": true,
+                "height": "auto",
+                "sortname": "emp_id",
+                "scrollrows": true,
+
+                "treeGrid": true,
+                "ExpandColumn": "name",
+                "treedatatype": "json",
+                "treeGridModel": "adjacency",
+                "ExpandColClick": true,
+                "loadonce": true,
+                "rowNum": 100,
+                "treeReader": {
+                    "parent_id_field": "boss_id",
+                    "level_field": "level",
+                    "leaf_field": "isLeaf",
+                    "expanded_field": "expanded",
+                    "loaded": "loaded",
+                    "icon_field": "icon"
+                },
+                "pager": "#pager",
+                "onSelectRow": function (rowid) {
+                    if (rowid) {
+                        var rdata = $('#tree').jqGrid('getRowData', rowid);
+                        if (rdata.isLeaf === 'true') {
+                            alert(rdata.salary);
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+
+</body>
+</html>
