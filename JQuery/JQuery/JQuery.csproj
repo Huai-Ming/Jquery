@@ -57,9 +57,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bootstrap Jqgrid\index.html" />
     <Content Include="jqGrid\AdjacencySimpleTree.html" />
     <Content Include="jqGrid\data.json" />
     <Content Include="jqGrid\data1.json" />
+    <Content Include="Bootstrap Jqgrid\data.json" />
+    <Content Include="Bootstrap Jqgrid\subgridData.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
