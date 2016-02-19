@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <style>
+        .chart div {
+            font: 10px sans-serif;
+            background-color: steelblue;
+            text-align: right;
+            padding: 3px;
+            margin: 1px;
+            color: white;
+        }
+    </style>
+    <link rel="stylesheet" href="../Content/ui.jqgrid.css" type="text/css" />
+    <link rel="stylesheet" href="../Content/jquery-ui.css" type="text/css" />
+    <script src="../Scripts/jquery-1.11.3.js" type="text/javascript"></script>
+    <script src="../Scripts/d3/d3.js" type="text/javascript">
+
+    </script>
+    <script>
+        $(function () {
+                var data = [4, 8, 15, 16, 23, 42];
+
+            //Scaling to fit: D3’s scales specify a mapping from data space (domain) to display space (range)
+            //to remove the hard code width cardinal
+                var x = d3.scale.linear()
+                    .domain([0, d3.max(data)])
+                    .range([0, 420]);
+
+                // select div with class chart
+            d3.select(".chart")
+                //you want many divs: one for each data point
+                //Data join, create a div element per datum
+                  .selectAll("div")
+                    .data(data)
+                //As there is no div to update and exit, we can only use the div to append to the enter selection 
+                //This append method appends a new div for each data point to the enter selection
+                  .enter().append("div")
+            //Because these elements were created with the data join, each bar is already bound to data.
+            //We set the dimensions of each bar based on its data by passing a function to compute the width style property.
+            //Data is specified as an array of values, and each value is passed as the first argument (d) to selection functions.
+                    .style("width", function (d) { return x(d) + "px"; })
+                    .text(function (d) { return d; });
+            
+        });
+    </script>
+</head>
+<body>
+    <div class="chart"></div>
+</body>
+</html>

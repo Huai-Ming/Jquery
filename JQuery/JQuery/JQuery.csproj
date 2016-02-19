@@ -58,11 +58,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Bootstrap Jqgrid\index.html" />
+    <Content Include="d3\basic.html" />
+    <Content Include="d3\index.html" />
+    <Content Include="d3\manualChart.html" />
+    <Content Include="d3\manualRotating.html" />
+    <Content Include="d3\manualSVG.html" />
+    <Content Include="d3\rotating.html" />
+    <Content Include="d3\rotating1.html" />
+    <Content Include="d3\rotating2.html" />
+    <Content Include="d3\tsvLoading.html" />
     <Content Include="jqGrid\AdjacencySimpleTree.html" />
     <Content Include="jqGrid\data.json" />
     <Content Include="jqGrid\data1.json" />
     <Content Include="Bootstrap Jqgrid\data.json" />
     <Content Include="Bootstrap Jqgrid\subgridData.json" />
+    <Content Include="d3\data.tsv" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -93,6 +103,8 @@
     <Content Include="jqGrid\index.html" />
     <Content Include="jqGrid\simpleTree.html" />
     <Content Include="jqGrid\TreeMenu.html" />
+    <Content Include="Scripts\d3\d3.js" />
+    <Content Include="Scripts\d3\d3.min.js" />
     <Content Include="Scripts\grid.locale-en.js" />
     <Content Include="Scripts\jquery-1.11.3.js" />
     <Content Include="Scripts\jquery.jqGrid.js" />
