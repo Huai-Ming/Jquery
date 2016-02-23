@@ -58,7 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Bootstrap Jqgrid\index.html" />
+    <Content Include="d3\BarChatWithJson.html" />
     <Content Include="d3\basic.html" />
+    <Content Include="d3\d3Table.html" />
     <Content Include="d3\index.html" />
     <Content Include="d3\manualChart.html" />
     <Content Include="d3\manualRotating.html" />
@@ -73,6 +75,7 @@
     <Content Include="Bootstrap Jqgrid\data.json" />
     <Content Include="Bootstrap Jqgrid\subgridData.json" />
     <Content Include="d3\data.tsv" />
+    <Content Include="d3\data1.tsv" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
